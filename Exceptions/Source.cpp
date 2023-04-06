@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 //#define EXCEPTION_BASICS
@@ -10,7 +10,7 @@ void main()
 	try
 	{
 		//throw 1;
-		//throw "Something went wrong"; // ключевое слово throw (бросить) бросает исключение
+		//throw "Something went wrong"; // РєР»СЋС‡РµРІРѕРµ СЃР»РѕРІРѕ throw (Р±СЂРѕСЃРёС‚СЊ) Р±СЂРѕСЃР°РµС‚ РёСЃРєР»СЋС‡РµРЅРёРµ
 		throw std::exception("STD exception thrown");
 	}
 	catch (int e)
@@ -24,13 +24,13 @@ void main()
 	catch (const std::exception& e)
 	{
 		std::cerr << e.what() << endl;
-		//Метод what() возвращает сообщение об ошибке в виде C-string (const char*)
+		//РњРµС‚РѕРґ what() РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ РІ РІРёРґРµ C-string (const char*)
 	}
 	cout << "Final" << endl;
 #endif // EXCEPTION_BASICS
 
 	int a, b;
-	cout << "Введите два числа: "; cin >> a >> b;
+	cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°: "; cin >> a >> b;
 	try
 	{
 		cout << a / b << endl;
