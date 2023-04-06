@@ -21,9 +21,9 @@ template<typename T>void vector_properties(const std::vector<T>& vec)
 }
 
 //#define STL_ARRAY
-//#define STL_VECTOR
+#define STL_VECTOR
 //#define STL_DEQUE
-#define STL_LIST
+//#define STL_LIST
 
 void main()
 {
@@ -84,14 +84,17 @@ void main()
 	//vector_properties(vec2);
 
 
-	int index;
+	/*int index;
 	int value;
 	cout << "Введите индекс добавляемого элемента: "; cin >> index;
 	cout << "Введите значение добавляемого элемента: "; cin >> value;
 	vec.insert(vec.begin() + index, value);
+	for (int i : vec)cout << i << tab; cout << endl;*/
+
+	int index;
+	cout << "Введите индекс удаляемого элемента: "; cin >> index;
+	vec.erase(vec.begin() + index);
 	for (int i : vec)cout << i << tab; cout << endl;
-
-
 	
 #endif // STL_VECTOR
 
