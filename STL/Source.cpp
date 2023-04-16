@@ -4,6 +4,8 @@
 #include<deque>
 #include<list>
 #include<iterator>
+#include<forward_list>
+
 using std::cin;
 using std::cout;
 using std::endl;
@@ -21,9 +23,10 @@ template<typename T>void vector_properties(const std::vector<T>& vec)
 }
 
 //#define STL_ARRAY
-#define STL_VECTOR
+//#define STL_VECTOR
 //#define STL_DEQUE
 //#define STL_LIST
+#define STL_FORWARD_LIST
 
 void main()
 {
@@ -138,5 +141,37 @@ void main()
 	for (int i : list)cout << i << tab; cout << endl;
 #endif // STL_LIST
 
+#ifdef STL_FORWARD_LIST
+	
+	std::forward_list<int> numbers{ 1, 2, 3, 4, 5 };
+
+	auto current = numbers.begin(); // итератор на начало списка
+	auto end = numbers.end();       // указатель на конец списка
+	while (current != end)
+	{
+		std::cout << *current << "\t";
+		current++;
+	}
+	std::cout << std::endl;
+
+	
+	//numbers.push_front(6);  // добавляем в начало число 6
+	
+	//numbers.emplace_front(-3);  // добавляем в начало число -3
+
+	//numbers.pop_front();    //удаляем первый элемент
+
+	//numbers.resize(4);   //оставляем первые четыре элемента
+
+	//auto iter = numbers.erase_after(numbers.begin());
+
+	numbers.assign(4, 3);
+
+	for (int n : numbers)
+		std::cout << n << "\t";
+	std::cout << std::endl;
+
+	
+#endif // STL_FORWARD_LIST
 
 }
